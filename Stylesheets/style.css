@@ -1,0 +1,152 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.navbar {
+    /*border: 2px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAD826;
+    padding: 1px 20px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+/* This is the Navigation Bar Logo */
+/*
+.navbar .logo {
+    border: 2px solid red;
+}
+*/
+.navbar .logo img {
+    width: 200px;
+}
+
+/* This is the Navigation Bar Toggle Button for Mobile UI*/
+.navbar .toggle-button {
+    display: none;
+    cursor: pointer;
+}
+.navbar .toggle-button i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* This is the Navigation Bar Links for Desktop & Mobile*/
+.navbar .nav-links {
+    /*border: 2px solid red;*/
+    list-style: none;
+    display: flex;
+}
+.navbar .nav-links li {
+    margin-right: 55px;
+}
+.navbar .nav-links li a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+.navbar .nav-links li a:hover {
+    color: #e2a222d7;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+/* Stylesheet for the Section Content */
+.main-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(108,240,242);
+    background: linear-gradient(90deg, rgba(108,240,242,1) 0%, rgba(145,227,240,1) 50%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-section img {
+    width: 200px;
+    transform: translateY(-10%);
+    animation: floater 1.5s infinite;
+    transition: ease 0.5s;
+}
+
+@keyframes floater {
+    0%{transform: translateY(-10%);transition: ease 0.3s;}
+    50%{transform: translateY(10%);transition: ease 0.3s;}
+  }
+
+/* Stylesheet for the Product Section */
+.product-section {
+    min-height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,251,228,0.6377144607843137) 51%, rgba(255,255,255,1) 100%);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-section img {
+    width: 200px;
+    transform: translateY(-10%);
+    animation: floater 1.5s infinite;
+    transition: ease 0.5s;
+}
+
+/* This is the Navigation Bar Media Query for Responsive Mobile Functionality */
+@media screen and (max-width: 930px) {
+    .navbar {
+        padding: 5px 5px;
+        justify-content: space-between;
+    }
+    .navbar .logo {
+        margin-left: 40%;
+    }
+    .navbar .logo img {
+        width: 100px;
+    }
+    .navbar .toggle-button {
+        display: flex;
+    }
+    .navbar .nav-links li a {
+        font-size: 1rem;
+        color: white;
+    }
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        padding: 25px;
+        top: 100%;
+        left: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .navbar .nav-links li {
+        padding: 12px 0px;
+    }
+    .navbar .nav-links.active {
+        display: block;
+    }
+}
