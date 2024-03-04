@@ -111,6 +111,89 @@ body {
     transition: ease 0.5s;
 }
 
+.footer {
+    background-color: #000000;
+    font-size: .8em;
+    padding: 10px;
+}
+
+.footer .first-row-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.footer .first-row-links li {
+    margin-right: 25px;
+}
+
+.footer .first-row-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .first-row-links li a:hover {
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.footer .second-row-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.footer .second-row-links li {
+    margin-right: 25px;
+}
+
+.footer .second-row-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .second-row-links li a:hover {
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.footer .third-row-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.footer .third-row-links li {
+    margin-right: 25px;
+}
+
+.footer .third-row-links li #facebook:hover {
+    color: #316FF6;
+}
+
+.footer .third-row-links li #twitter:hover {
+    color: #1DA1F2;
+}
+
+.footer .third-row-links li #instagram:hover {
+    color: #E1306C;
+}
+
+.footer .third-row-links li #shopify:hover {
+    color: #95bf47;
+}
+
+.footer .third-row-links li i {
+    color: white;
+    font-size: 1.5rem;
+}
+
 /* This is the Navigation Bar Media Query for Responsive Mobile Functionality */
 @media screen and (max-width: 930px) {
     .navbar {
@@ -148,5 +231,26 @@ body {
     }
     .navbar .nav-links.active {
         display: block;
+    }
+
+    .footer .first-row-links li {
+        margin-right: 5px;
+    }
+    
+    .footer .first-row-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: .5rem;
+    }
+
+    .footer .second-row-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: .5rem;
+    }
+
+    .footer .third-row-links li i {
+        color: white;
+        font-size: 1rem;
     }
 }
